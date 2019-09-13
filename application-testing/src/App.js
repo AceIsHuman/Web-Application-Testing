@@ -14,6 +14,11 @@ function App() {
     setStrikes(0);
   }
 
+  const addStrike = () => {
+    if (strikes ===2 ) clearBoard();
+    else setStrikes(strikes + 1);
+  }
+
   return (
     <div className="App">
       <Display balls={balls} strikes={strikes}/>
