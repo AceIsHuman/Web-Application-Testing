@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Display from './components/Display';
@@ -32,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <Display balls={balls} strikes={strikes}/>
-      <Dashboard />
+      <Dashboard addStrike={addStrike} addBall={addBall} foulBall={foulBall} clearBoard={clearBoard} />
     </div>
   );
 }
