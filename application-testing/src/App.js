@@ -8,7 +8,11 @@ import Dashboard from './components/Dashboard';
 function App() {
   const [balls, setBalls] = useState(0);
   const [strikes, setStrikes] = useState(0);
-  const [fouls, setFouls] = useState(0);
+
+  const clearBoard = () => {
+    setBalls(0);
+    setStrikes(0);
+  }
 
   return (
     <div className="App">
