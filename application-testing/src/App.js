@@ -24,6 +24,11 @@ function App() {
     else setBalls(balls + 1);
   }
 
+  const foulBall = () => {
+    if (strikes === 2) return;
+    else setStrikes(strikes + 1);
+  }
+
   return (
     <div className="App">
       <Display balls={balls} strikes={strikes}/>
