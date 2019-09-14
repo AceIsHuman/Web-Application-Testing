@@ -8,3 +8,9 @@ test('addBall fires on button click', () => {
   const addBall = queryByText(/add ball/i);
   fireEvent.click(addBall);
 });
+
+test('addStrike fires on button click', () => {
+  const { queryByText } = rtl.render(<App />);
+  const addStrike = queryByText(/add strike/i);
+  fireEvent.click(addStrike);
+});
