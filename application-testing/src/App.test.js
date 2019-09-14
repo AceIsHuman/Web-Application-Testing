@@ -1,9 +1,10 @@
 import React from 'react';
 import * as rtl from '@testing-library/react';
-import '@testing-library/dom';
+import { fireEvent } from '@testing-library/dom';
 import App from './App';
 
-test('Adds strikes and reset at 3', () => {
+test('addBall fires on button click', () => {
   const { queryByText } = rtl.render(<App />);
-  expect(queryByText(/ball/i)).not.toBeNull();
+  const addBall = queryByText(/add ball/i);
+  fireEvent.click(addBall);
 });
