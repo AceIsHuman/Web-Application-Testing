@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as rtl from '@testing-library/react';
+import '@testing-library/dom';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('Adds strikes and reset at 3', () => {
+  const { queryByText } = rtl.render(<App />);
+  expect(queryByText(/ball/i)).not.toBeNull();
 });
